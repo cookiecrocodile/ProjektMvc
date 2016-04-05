@@ -20,7 +20,7 @@ namespace projektmvc.Controllers
             if (username != null)
             {
                 //Försök logga in
-                List<UserModel> defaultUsers = UserModel.DefaultUsers();
+                List<UserModel> defaultUsers = (List<UserModel>)Session["Users"];
 
                 foreach (UserModel u in defaultUsers)
                 {
@@ -50,6 +50,51 @@ namespace projektmvc.Controllers
 
 
             return View();
+        }
+        //Visar create account-sidan, om man inte redan är inloggad, annars kommer man tillbaka till index
+        public ActionResult CreateAccount()
+        {
+            string username = Request["username"];
+            string password = Request["password"];
+
+            List<UserModel> existingUsers = (List<UserModel>)Session["Users"];
+            ViewBag.AccountCreated = false;
+            ViewBag.FailedAttempt = false;
+
+            if (!(bool)Session["LoginStatus"])
+            {
+                bool userExists = false;
+                
+                foreach (UserModel m in existingUsers)
+                {
+                    if (m.Name == username)
+                    {
+                        userExists = true;
+                        break;
+                    }
+                }
+
+                if (!userExists && username !=null && password !=null)
+                {
+                    existingUsers.Add(new UserModel() { Name = username, Password = password });
+                    Session["Users"] = existingUsers;
+                    ViewBag.AccountCreated = true;
+                    //Session["LoginStatus"] = true;
+                }
+                //Fixa så att man får ett fel om man anger ett namn som finns
+                else if (userExists)
+                {
+                    ViewBag.FailedAttempt = true;
+                }
+
+                return View();
+            }
+            else
+            {
+                //Session["username"] = username;
+                return Redirect("/Default/Index");
+            }
+            
         }
     }
 }

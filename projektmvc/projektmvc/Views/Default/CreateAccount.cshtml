@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Create Account";
+
+}
+
+<h2>Create Account</h2>
+
+@if (ViewBag.AccountCreated)
+{
+    <p>Account successfully created. <a href="/Default/Index">Return to login screen</a>.</p>
+}
+else
+{
+    <div class="container">
+        <form action="/Default/CreateAccount" method="post">
+            <div class="row">
+                <label class="col-md-2" for="username">Username:</label>
+                <input class="col-md-6" type="text" name="username" placeholder="username" value="" />
+            </div>
+            <div class="row">
+                <label class="col-md-2" for="password">Password:</label>
+                <input class="col-md-6" type="password" name="password" placeholder="password" value="" />
+            </div>
+            <button type="submit">Create Account</button>
+        </form>
+        <br />
+    </div>
+
+    if (ViewBag.FailedAttempt)
+    {
+        <p>Username invalid or already in use. If you already have an account <a href="/Default/Index">click here to log in</a>.</p>
+    }
+}
+
+
+
+

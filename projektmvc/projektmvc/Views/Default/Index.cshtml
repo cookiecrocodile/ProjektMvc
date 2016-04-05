@@ -11,15 +11,16 @@
     <div class="container">
         <form action="/Default/Index" method="post">
             <div class="row">
-                <label class="col-md-2" for="username">Användarnamn:</label>
-                <input class="col-md-6" type="text" name="username" placeholder="användarnamn" value="@Request["username"]" />
+                <label class="col-md-2" for="username">Username:</label>
+                <input class="col-md-6" type="text" name="username" placeholder="username" value="@Request["username"]" />
             </div>
             <div class="row">
-                <label class="col-md-2" for="password">Lösenord:</label>
-                <input class="col-md-6" type="text" name="password" value="@Request["password"]" />
+                <label class="col-md-2" for="password">Password:</label>
+                <input class="col-md-6" type="password" name="password" value="@Request["password"]" />
             </div>
-            <button type="submit">Logga in</button>
+            <button type="submit">Log in</button>
         </form>
+        <a href="/Default/CreateAccount">Create new account</a>
     </div>
 }
 else
@@ -27,7 +28,7 @@ else
     <p>Du är inloggad som: <strong>@Session["username"]</strong></p>
 
     <form action="" method="post">
-        <button type="submit" name="logoutButton">Logga ut</button>
+        <button type="submit" name="logoutButton">Log out</button>
     </form>
 }
 
