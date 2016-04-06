@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit Product</h2>
+
+<div class="col-lg-4 col-md-8 col-sm-7 col-xs-12">
+    <form action="/Product/Edit" method="post">
+        <div class="form-group">
+            <!-- detta fält är readonly för att om man ändrar id:t är det inte samma produkt längre-->
+            <label>Id:<input class="form-control" type="number" name="id" placeholder="0" value="@ViewBag.Id" readonly /></label>
+        </div>
+        <div class="form-group">
+            <label>Brand name:<input class="form-control" type="text" name="name" placeholder="brand" value="@ViewBag.Name" required /></label>
+        </div>
+        <div class="form-group">
+            <label>Model:<input class="form-control" type="text" name="model" value="@ViewBag.Model" required /></label>
+        </div>
+        <div class="form-group">
+            <label>Price:<input class="form-control" type="number" name="price" value="@ViewBag.Price" required /></label>
+        </div>
+        <div class="form-group">
+            <label>In Stock:<input class="form-control" type="number" name="stock" value="@ViewBag.Stock" /></label>
+        </div>
+        <div class="form-group">
+            <label>Image link:<input class="form-control" type="text" name="link" value="@ViewBag.Link" /></label>
+        </div>
+        <button type="submit">Update product</button>
+    </form>
+    <br />
+
+    <p>
+        @ViewBag.Message<br />
+        <a href="/Product/Products">Return to product page</a>
+
+
+</div>

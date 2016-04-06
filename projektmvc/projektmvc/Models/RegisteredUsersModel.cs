@@ -29,18 +29,5 @@ namespace projektmvc.Models
         {
             return regUsers;
         }
-
-        //public bool UserExists(string name)
-        //{
-        //    foreach (UserModel m in regUsers)
-        //    {
-        //        if (m.Name == name)
-        //        {
-        //            return true;
-        //        }
-        //    }
-
-        //    return false;
-        //}
     }
 }

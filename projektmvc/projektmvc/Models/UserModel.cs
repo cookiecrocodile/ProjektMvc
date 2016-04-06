@@ -10,10 +10,6 @@ namespace projektmvc.Models
         public string Name { get; set; }
         public string Password { get; set; }
 
-        //private static List<UserModel> regUsers = new List<UserModel>()
-        //{
-
-        //};
 
         //public static List<UserModel> DefaultUsers()
         //{

@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<div class="container">
+    <h3>Add Car </h3>
+    <div class="col-lg-4 col-md-8 col-sm-7 col-xs-12">
+        <form action="/Product/Create" method="post">
+            <div class="form-group">
+                <label>Id:<input class="form-control" type="number" name="id" placeholder="0" value="" required /></label>
+            </div>
+            <div class="form-group">
+                <label>Brand name:<input class="form-control" type="text" name="name" placeholder="brand" value="" required /></label>
+            </div>
+            <div class="form-group">
+                <label>Model:<input class="form-control" type="text" name="model" value="" required /></label>
+            </div>
+            <div class="form-group">
+                <label>Price:<input class="form-control" type="number" name="price" value="" required /></label>
+            </div>
+            <div class="form-group">
+                <label>In Stock:<input class="form-control" type="number" name="stock" value="0" /></label>
+            </div>
+            <div class="form-group">
+                <label>Image link:<input class="form-control" type="text" name="link" value="" /></label>
+            </div>
+            <button type="submit">Add this car</button>
+        </form>
+        <br />
+
+        <p>
+            @ViewBag.Message<br />
+            <a href="/Product/Products">Return to product page</a>
+
+
+</div>
+    <div class="col-lg-8 col-md-4 col-sm-5 col-xs-12">
+        
+    </p>
+    </div>
+</div>
