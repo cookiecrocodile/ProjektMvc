@@ -52,9 +52,15 @@
             
         </td>
         <td>
+            
             <!--Lägg till en action link för att lägga till i kundvagn-->
-            @Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { productId = item.Id }, null);
+            @if ((bool)Session["LoginStatus"])
+            {
+                @Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { productId = item.Id, productName = item.Name, productPrice = item.Price }, null)<br />
+            }
+            
             <!--Ev. lägg till en action link för att visa mer information-->
+
             @if ((string)Session["username"] == "admin")
             {
                   @Html.ActionLink("Delete", "Delete", "Product", new { productId = item.Id }, null);
