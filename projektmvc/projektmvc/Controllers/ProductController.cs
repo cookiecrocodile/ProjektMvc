@@ -66,7 +66,7 @@ namespace projektmvc.Controllers
                             products.Add(new ProductModel(Id, name, model, Price, Stock, link));
                         }
 
-                        ViewBag.Message = "Product added successfully";
+                        ViewBag.Message = "Product added successfully.";
                     }
 
                 }
