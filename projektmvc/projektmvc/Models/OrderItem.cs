@@ -21,5 +21,35 @@ namespace projektmvc.Models
             Price = price;
             Numbers = number;
         }
+
+        //Sätter om propertyn number på ett inskickat OrderItem till det antal man anger
+        public static void EditNumberOfItems(OrderItem item, int num)
+        {
+            item.Numbers = num;
+        }
+
+        public static int CalculateNumberOfItems(List<OrderItem> order)
+        {
+            int itemTotal = 0;
+
+            foreach (OrderItem item in order)
+            {
+                itemTotal += item.Numbers;
+            }
+
+            return itemTotal;
+        }
+
+        public static int CalculateTotal(List<OrderItem> order)
+        {
+            int total = 0;
+
+            foreach (OrderItem item in order)
+            {
+                total += (item.Numbers * item.Price);
+            }
+
+            return total;
+        }
     }
 }

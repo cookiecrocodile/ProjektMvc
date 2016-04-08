@@ -30,7 +30,6 @@ namespace projektmvc.Controllers
                         {
                             Session["LoginStatus"] = true;
                             Session["username"] = username;
-                            //return Redirect("/Secure/Index");
                         }
                         break; //Hoppa ur loopen om användarnamn är rätt men inte lösenord
                     }
@@ -42,6 +41,7 @@ namespace projektmvc.Controllers
                 //logga ut
                 Session["LoginStatus"] = false;
                 Session["username"] = null;
+                Session["Cart"] = null; 
             }
             else
             {
