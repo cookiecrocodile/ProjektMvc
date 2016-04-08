@@ -33,7 +33,7 @@ namespace projektmvc.Controllers
 
                 bool validId = true;
 
-                //Kolla om id-fältet är tomt, i så fall gör inget
+                //Kolla om id-fältet är tomt, annars gör detta
                 if (id != null)
                 {
                     int Id, Price, Stock;

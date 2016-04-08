@@ -105,7 +105,9 @@ namespace projektmvc.Controllers
                 ViewBag.PriceTotal = (int)prTot;
             }
 
-            return View("ShoppingCart", orderedItems);
+            return View("../Product/Products", products);
+
+            //return View("ShoppingCart", orderedItems);
         }
 
         //Actionen som tar bort objekt ur ordern
