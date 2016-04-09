@@ -12,7 +12,10 @@ namespace projektmvc.Controllers
         // GET: ShoppingCart
         public ActionResult ShoppingCart()
         {
-            return View();
+			List<ProductModel> products = (List<ProductModel>)Session["Products"];
+			List<OrderItem> orderedItems = new List<OrderItem>();
+
+			return View();
         }
 
         public ActionResult AddToCart(string productId, string productName, string productPrice)
