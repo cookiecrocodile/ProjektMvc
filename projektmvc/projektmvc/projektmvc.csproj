@@ -135,8 +135,9 @@
     <Content Include="Views\Product\Products.cshtml" />
     <Content Include="Views\Product\Create.cshtml" />
     <Content Include="Views\Product\Edit.cshtml" />
-    <Content Include="Views\ShoppingCart\AddToCart.cshtml" />
     <Content Include="Views\Default\Search.cshtml" />
+    <Content Include="Views\ShoppingCart\Send.cshtml" />
+    <Content Include="Views\ShoppingCart\ShoppingCart.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
