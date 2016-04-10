@@ -96,5 +96,20 @@ namespace projektmvc.Controllers
             }
             
         }
-    }
+		/************* SEARCH *************/
+		public ActionResult Search()
+		{
+			string searchSt = Request["search"];
+			List<ProductModel> products = (List<ProductModel>)Session["Products"];
+			var results = from m in products
+						  select m;
+
+			if (!String.IsNullOrEmpty(searchSt))
+			{
+				results = results.Where(s => s.Name.ToUpper().Contains(searchSt.ToUpper())
+				|| s.Model.ToUpper().Contains(searchSt.ToUpper()));
+			}
+			return View(results);
+		}
+	}
 }
