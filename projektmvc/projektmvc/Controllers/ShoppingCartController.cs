@@ -30,13 +30,14 @@ namespace projektmvc.Controllers
             }
             else
             {
-                ViewBag.ItemsTotal = (int)itTot;
-                ViewBag.PriceTotal = (int)prTot;
+                ViewBag.ItemsTotal = itTot;
+                ViewBag.PriceTotal = prTot;
             }
 
             return View(orderedItems);
         }
 
+        //Add product to cart
         public ActionResult AddToCart(string productId, string productName, string productPrice)
         {
             List<ProductModel> products = (List<ProductModel>)Session["Products"];
@@ -206,6 +207,13 @@ namespace projektmvc.Controllers
             }
 
             return View("ShoppingCart", orderedItems);
+        }
+
+        public ActionResult Send()
+        {
+            Session["Cart"] = null;
+
+            return View();
         }
 
     }
