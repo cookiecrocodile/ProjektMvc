@@ -18,7 +18,6 @@ namespace projektmvc
 
         protected void Session_Start(object sender, EventArgs e)
         {
-
             RegisteredUsersModel regUsers = new RegisteredUsersModel();
             //Test angående produkterna
             List<ProductModel> products = new List<ProductModel>()
@@ -31,9 +30,7 @@ namespace projektmvc
             Session["LoginStatus"] = false;
             Session["Users"] = regUsers.GetUsers();
             Session["Products"] = products; //Produkttest
-            Session["Cart"] = null;
-            
-            
+            Session["Cart"] = null;  
         }
     }
 }

@@ -5,10 +5,6 @@
 }
 
 <h2>Search</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -46,10 +42,11 @@
         <td>
             @Html.DisplayFor(modelItem => item.ImageLink)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        <td> 
+			<p>
+				@ViewBag.Message<br />
+				<a href="/Product/Products">Return to product page</a>
+			</p>
         </td>
     </tr>
 }
