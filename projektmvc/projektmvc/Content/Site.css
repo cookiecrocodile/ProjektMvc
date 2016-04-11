@@ -1,6 +1,9 @@
-﻿body {
+﻿
+body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background: url('https://i.ytimg.com/vi/0z5kR6MyEJo/maxresdefault.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -15,4 +18,160 @@ select,
 textarea {
     max-width: 280px;
 }
+
+h1
+{
+    text-align:center;
+}
+
+.navbar-brand {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.navbar-nav {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 3px;
+      
+}
+
+
+.brand-before {
+    margin: 15px 0;
+}
+
+.brand-name {
+    margin: 0;
+    font-size: 4em;
+}
+
+
+
+footer {
+    color: #BCC6CC;
+}
+
+footer p {
+    margin: 0;
+    padding: 50px 0;
+    color: #BCC6CC;
+}
+
+@media screen and (min-width:768px) {
+    .brand {
+        display: inherit;
+        margin: 0;
+        padding: 30px 0 10px;
+        text-align: center;
+        text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+        font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 5em;
+        font-weight: 700;
+        line-height: normal;
+        color: #BCC6CC;
+    }
+
+
+
+
+    .address-bar {
+        display: inherit;
+        margin: 0;
+        padding: 0 0 40px;
+        text-align: center;
+        text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+        text-transform: uppercase;
+        font-size: 1.25em;
+        font-weight: 400;
+        letter-spacing: 3px;
+        color: #8F857F;
+    }
+
+    .navbar {
+        border-radius: 0;
+    }
+
+    .navbar-header {
+        display: none;
+    }
+
+    .navbar {
+        min-height: 0;
+    }
+
+    .navbar-default {
+        border: none;
+        background: #fff;
+        background: rgba(255,255,255,0.9);
+    }
+
+    .nav > li > a {
+        padding: 15px;
+        position:absolute;
+        
+    }
+
+    .navbar-nav > li > a {
+        line-height: normal;
+        float:right;
+        position:fixed;
+    }
+
+    .navbar-nav {
+        display: table;
+        float: none;
+        margin: 0 auto;
+        table-layout: fixed;
+        font-size: 1.25em;
+    }
+
+    .table {
+        color: white;
+        text-shadow: 3px;
+        width: 100%;
+    }
+
+    h1 {
+        text-align: center;
+        color: white;
+    }
+
+.carousel-inner > .item > img
+{
+	margin: 0 auto;
+}
+
+.carousel-caption h3
+
+{
+font-family:    Garamond;
+font-size:      3em;
+color:          white !important;
+}
+
+.carousel-caption p {
+font-family:    Garamond;
+font-size:      2em;
+color:          white !important;
+}
+
+h2, h3 {
+    color:white;
+     text-shadow: 2px 2px 4px #000000;
+}
+
+p
+{
+    color:white;
+    text-shadow: 2px 2px 4px #000000;
+}
+.form-group
+{
+    color:white;
+    text-shadow: 2px 2px 4px #000000;
+}
+}
+
 

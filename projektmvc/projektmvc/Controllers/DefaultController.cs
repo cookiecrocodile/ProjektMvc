@@ -111,5 +111,13 @@ namespace projektmvc.Controllers
 			}
 			return View(results);
 		}
-	}
+
+        public ActionResult Home()
+        {
+
+            return View();
+        }
+
+
+    }
 }
