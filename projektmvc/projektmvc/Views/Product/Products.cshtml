@@ -13,6 +13,7 @@
     }
     
 </p>
+
 <table class="table">
     <tr>
         <th>
@@ -32,49 +33,61 @@
         </th>
         <th></th>
     </tr>
-   
 
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
+
+    @foreach (var item in Model)
+    {
          
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Model)
-        </td>
-        <td>
-            $@Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NumberInStock)
-        </td>
-        <td>
-            <img src="@item.ImageLink" width="200" height="100"/>
-            
-        </td>
-        
-        <td>
-            
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Model)
+                    </td>
+                    <td>
+                        $@Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NumberInStock)
+                    </td>
+                    <td>
+                        <img src="@item.ImageLink" width="200" height="100" />
+
+                    </td>
+
+                    <td>
+
+
+    
+
             <!--Lägg till en action link för att lägga till i kundvagn-->
-            @if ((bool)Session["LoginStatus"])
-            {
-                @Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { productId = item.Id, productName = item.Name, productPrice = item.Price }, null)<br />
-            }
-            
+        @if ((bool)Session["LoginStatus"])
+        {
+            @Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { productId = item.Id, productName = item.Name, productPrice = item.Price }, null)
+            <br />
+        }
+
             <!--Ev. lägg till en action link för att visa mer information-->
 
-            @if ((string)Session["username"] == "admin")
-            {
-                  @Html.ActionLink("Delete", "Delete", "Product", new { productId = item.Id }, null);
-               <br />
+        @if ((string)Session["username"] == "admin")
+        {
+            @Html.ActionLink("Delete", "Delete", "Product", new { productId = item.Id }, null);
+            <br />
                 @Html.ActionLink("Edit", "Edit", "Product", new { prodId = item.Id, prodName = item.Name, prodModel = item.Model, prodPrice = item.Price, prodStock = item.NumberInStock, prodLink = item.ImageLink }, null);
 
-            }
+        }
         </td>
     </tr>
-}
+    }
 
 </table>
+
+
+
+
+
+
 

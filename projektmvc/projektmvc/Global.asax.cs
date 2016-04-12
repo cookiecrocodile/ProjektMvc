@@ -32,7 +32,7 @@ namespace projektmvc
                 new ProductModel(800, "Mclaren", "P1", 800000, 1, "https://i.kinja-img.com/gawker-media/image/upload/s--rl0akGA5--/c_scale,fl_progressive,q_80,w_800/xq6ebpnutamvxlvmi1r9.jpg"),
                 new ProductModel(900, "Dragster", "Roadster", 2000, 1, "http://ewallpapershub.net/wp-content/uploads/2015/01/hd-wallpapers-1080p-cars.jpg"),
                 new ProductModel(1000, "Ariel Motor", "Atom", 100000, 4, "http://pictures.topspeed.com/IMG/crop/201210/arien-atom-3-5-1_800x0w.jpg"),
-                new ProductModel(1100, "Tesla", "Model S", 100000, 15, "http://pictures.topspeed.com/IMG/crop/201210/arien-atom-3-5-1_800x0w.jpg"),
+                new ProductModel(1100, "Tesla", "Model S", 100000, 15, "http://pictures.topspeed.com/IMG/crop/201410/tesla-model-s-2_600x0w.jpg"),
                 new ProductModel(1200, "Corvette", "Zr1", 1500000, 3, "http://www.blogcdn.com/www.autoblog.com/media/2012/02/2012-chevrolet-corvette-zr1-review.jpg")
             };
 
