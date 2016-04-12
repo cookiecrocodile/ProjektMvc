@@ -39,7 +39,8 @@ namespace projektmvc
             Session["LoginStatus"] = false;
             Session["Users"] = regUsers.GetUsers();
             Session["Products"] = products; //Produkttest
-            Session["Cart"] = null;  
+            Session["Cart"] = null;
+            Session["InCart"] = null;
         }
     }
 }

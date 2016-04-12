@@ -34,7 +34,9 @@ namespace projektmvc.Controllers
 				ViewBag.PriceTotal = prTot;
 			}
 
-			return View(orderedItems);
+            Session["InCart"] = itTot;
+
+            return View(orderedItems);
 		}
 
 		//Add product to cart
@@ -106,9 +108,11 @@ namespace projektmvc.Controllers
 				ViewBag.PriceTotal = (int)prTot;
 			}
 
-			return View("../Product/Products", products);
+            Session["InCart"] = itTot;
 
-			//return View("ShoppingCart", orderedItems);
+            return View("../Product/Products", products);
+
+			
 		}
 
 		//Actionen som tar bort objekt ur ordern
@@ -144,7 +148,9 @@ namespace projektmvc.Controllers
 				ViewBag.PriceTotal = (int)prTot;
 			}
 
-			return View("ShoppingCart", orderedItems); //Skickar tillbaka vyn Products med modellen products
+            Session["InCart"] = itTot;
+
+            return View("ShoppingCart", orderedItems); //Skickar tillbaka vyn Products med modellen products
 
 		}
 
@@ -206,12 +212,15 @@ namespace projektmvc.Controllers
 				ViewBag.PriceTotal = (int)prTot;
 			}
 
-			return View("ShoppingCart", orderedItems);
+            Session["InCart"] = itTot;
+
+            return View("ShoppingCart", orderedItems);
 		}
 
 		public ActionResult Send()
 		{
 			Session["Cart"] = null;
+            Session["InCart"] = null;
 
 			return View();
 		}
