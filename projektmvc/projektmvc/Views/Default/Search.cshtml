@@ -5,6 +5,7 @@
 }
 
 <h2>Search</h2>
+
 <table class="table">
     <tr>
         <th>
@@ -40,15 +41,16 @@
             @Html.DisplayFor(modelItem => item.NumberInStock)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ImageLink)
+            <img src="@item.ImageLink" width="200" height="100" />
         </td>
         <td> 
-			<p>
-				@ViewBag.Message<br />
-				<a href="/Product/Products">Return to product page</a>
-			</p>
+			
         </td>
     </tr>
 }
 
 </table>
+<div>
+    @*@ViewBag.Message<br />*@
+    <a href="/Product/Products">Return to product page</a>
+</div>
